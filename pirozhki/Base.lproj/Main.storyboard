@@ -15,10 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06H-J6-KIF">
-                                <rect key="frame" x="162" y="433" width="91" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Нажми меня"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06H-J6-KIF">
+                                <rect key="frame" x="20" y="433" width="374" height="30"/>
+                                <state key="normal" title="Съесть пирожок"/>
                                 <connections>
                                     <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HOp-ng-EA2"/>
                                 </connections>
@@ -30,12 +29,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kwf-K2-TmQ">
+                                <rect key="frame" x="60" y="677" width="100" height="100.00000000000023"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="RQZ-2I-ZMx"/>
+                                    <constraint firstAttribute="height" constant="100" id="VWU-2u-qJO"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jq6-8i-GEa">
+                                <rect key="frame" x="169" y="821" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Подвинуть"/>
+                                <connections>
+                                    <action selector="moveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XOi-YQ-jgW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kwf-K2-TmQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="YqQ-bI-xfT"/>
+                            <constraint firstItem="kwf-K2-TmQ" firstAttribute="top" secondItem="06H-J6-KIF" secondAttribute="bottom" constant="214" id="kYP-5B-Wxd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="labelName" destination="viA-1C-GhI" id="Cq2-cc-Pjk"/>
+                        <outlet property="leadingConstraint" destination="YqQ-bI-xfT" id="4Bd-M5-sR4"/>
+                        <outlet property="redView" destination="kwf-K2-TmQ" id="det-ov-mbN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
