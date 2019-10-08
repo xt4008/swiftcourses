@@ -15,22 +15,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06H-J6-KIF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06H-J6-KIF">
                                 <rect key="frame" x="20" y="433" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="pHN-mv-gpB"/>
+                                    <constraint firstAttribute="height" constant="30" id="yL5-eg-fS6"/>
+                                </constraints>
                                 <state key="normal" title="Съесть пирожок"/>
                                 <connections>
                                     <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HOp-ng-EA2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viA-1C-GhI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viA-1C-GhI">
                                 <rect key="frame" x="20" y="233" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="3rb-gN-Sga"/>
+                                    <constraint firstAttribute="height" constant="21" id="cL4-sG-1dS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kwf-K2-TmQ">
-                                <rect key="frame" x="60" y="677" width="100" height="100.00000000000023"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwf-K2-TmQ">
+                                <rect key="frame" x="60" y="677" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="RQZ-2I-ZMx"/>
@@ -48,8 +55,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="viA-1C-GhI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="189" id="KLX-p3-Sdc"/>
+                            <constraint firstItem="06H-J6-KIF" firstAttribute="top" secondItem="viA-1C-GhI" secondAttribute="bottom" constant="179" id="Lk9-YI-Ufz"/>
+                            <constraint firstItem="viA-1C-GhI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Mga-i1-Swy"/>
                             <constraint firstItem="kwf-K2-TmQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="YqQ-bI-xfT"/>
                             <constraint firstItem="kwf-K2-TmQ" firstAttribute="top" secondItem="06H-J6-KIF" secondAttribute="bottom" constant="214" id="kYP-5B-Wxd"/>
+                            <constraint firstItem="06H-J6-KIF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kfc-SY-2bE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
