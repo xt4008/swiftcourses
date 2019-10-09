@@ -12,7 +12,11 @@ class ViewController: UIViewController {
     @IBAction func moveButtonPressed(_ sender: Any) {
        leadingConstraint.constant = 300
         
-        UIView.animate(withDuration: 2.0, delay: 0.0, options: .curveEaseOut , animations: {
+        UIView.animate(withDuration: 2.0,
+                       delay: 0.0,
+                       options: .curveEaseOut ,
+                       animations: {
+                        self.redView.transform = CGAffineTransform (rotationAngle: 90)
               
                 
                 self.view.layoutIfNeeded()
