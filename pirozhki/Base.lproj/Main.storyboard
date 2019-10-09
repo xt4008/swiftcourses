@@ -65,6 +65,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="button" destination="Jq6-8i-GEa" id="7UN-MU-ZGg"/>
                         <outlet property="labelName" destination="viA-1C-GhI" id="Cq2-cc-Pjk"/>
                         <outlet property="leadingConstraint" destination="YqQ-bI-xfT" id="4Bd-M5-sR4"/>
                         <outlet property="redView" destination="kwf-K2-TmQ" id="det-ov-mbN"/>

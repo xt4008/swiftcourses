@@ -9,40 +9,39 @@
 import UIKit
  
 class ViewController: UIViewController {
-    @IBAction func moveButtonPressed(_ sender: Any) {
-       leadingConstraint.constant = 300
-        
-        UIView.animate(withDuration: 2.0,
-                       delay: 0.0,
-                       options: .curveEaseOut ,
-                       animations: {
-                        self.redView.transform = CGAffineTransform (rotationAngle: 90)
-              
-                
-                self.view.layoutIfNeeded()
-        }, completion: nil)
-        
-
-    }
-    
-    
     @IBOutlet weak var redView: UIView!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
-    
-    
-    var clickCount=0
- 
-    
     @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var button: UIButton!
     
+    var clickCount = 0
+    var isRightPosition = false
     
     @IBAction func buttonClick(_ sender: UIButton) {
-        
-
-        clickCount+=1
+        clickCount += 1
         labelName.text="Ты съел \(clickCount) пирожков"
     }
     
- 
+    @IBAction func moveButtonPressed(_ sender: Any) {
+        if isRightPosition {
+            animate(value: 0, rotate: 0)
+        } else {
+            animate(value: 300, rotate: CGFloat(Double.pi / 2))
+        }
+        isRightPosition = !isRightPosition
+    }
 
+    func animate(value: CGFloat, rotate: CGFloat) {
+        UIView.animate(withDuration: 2.0, delay: 0.0, options: .curveEaseOut, animations: {
+            self.leadingConstraint.constant = value
+            self.redView.transform = CGAffineTransform(rotationAngle: rotate)
+            self.view.layoutIfNeeded()
+            self.button.isEnabled = false
+        }, completion: { _ in
+            self.button.isEnabled = true
+        })
+    }
+    
+    //1) сделать измение цвета на 1 из 7 цветов радуги, подряд.
+    //2) Сделать секундомер минуты, секунды. Кнопка старт/стоп, сбросить
 }
